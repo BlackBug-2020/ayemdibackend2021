@@ -45,11 +45,11 @@ class AuthController extends Controller
             }
             elseif ($messages->has('barangay'))
             {
-                return response()->json(['status_code'=>400, 'message'=>'Please fill up all fields']);
+                return response()->json(['status_code'=>400, 'message'=>'Location is needed.']);
             }
             elseif ($messages->has('purok'))
             {
-                return response()->json(['status_code'=>400, 'message'=>'Please fill up all fields']);
+                return response()->json(['status_code'=>400, 'message'=>'Specific location is needed.']);
             }
             
             // return response()->json(['status_code'=>400, 'message'=>'Email is already taken!']);
